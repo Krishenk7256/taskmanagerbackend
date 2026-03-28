@@ -4,45 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="62a6a6d1-83b7-4de8-84aa-bd33a2414a3b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/FastAPIProject1.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/api/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/api/v1/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/api/v1/auth.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/api/v1/projects.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/api/v1/tasks.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/api/v1/users.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/core/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/core/config.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/core/database.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/core/deps.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/core/security.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/crud/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/crud/base.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/crud/project.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/crud/task.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/crud/user.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/main.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/models/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/models/project.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/models/task.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/models/user.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/schemas/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/schemas/base.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/schemas/project.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/schemas/task.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/schemas/token.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/schemas/user.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/services/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/services/auth.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/services/user.py" afterDir="false" />
-    </list>
+    <list default="true" id="62a6a6d1-83b7-4de8-84aa-bd33a2414a3b" name="Changes" comment="-" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -141,11 +103,35 @@
       <updated>1774603463594</updated>
       <workItem from="1774603464778" duration="13137000" />
       <workItem from="1774691374431" duration="5904000" />
-      <workItem from="1774710173430" duration="2828000" />
+      <workItem from="1774710173430" duration="3144000" />
     </task>
+    <task id="LOCAL-00001" summary="-">
+      <option name="closed" value="true" />
+      <created>1774713272336</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1774713272337</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="-" />
+    <option name="LAST_COMMIT_MESSAGE" value="-" />
   </component>
 </project>
