@@ -1,6 +1,6 @@
 from typing import List
 
-from fastapi import APIRouter, Depends, HTTPException, Query, status
+from fastapi import APIRouter, Depends, HTTPException, Path, Query, status
 from sqlalchemy.ext.asyncio import AsyncSession
 
 from ...core.deps import get_current_active_user, get_db
@@ -28,7 +28,7 @@ async def _require_owned_project(
 
 @router.get("", response_model=List[TaskOut])
 async def list_tasks(
-    project_id: int = Query(...),
+    project_id: int = Path(...),
     db: AsyncSession = Depends(get_db),
     current_user: User = Depends(get_current_active_user),
     skip: int = 0,
@@ -43,7 +43,7 @@ async def list_tasks(
 @router.post("", response_model=TaskOut, status_code=status.HTTP_201_CREATED)
 async def create_task(
     body: TaskCreateInProject,
-    project_id: int = Query(...),
+    project_id: int = Path(...),
     db: AsyncSession = Depends(get_db),
     current_user: User = Depends(get_current_active_user),
 ) -> Task:
@@ -69,7 +69,7 @@ async def create_task(
 @router.get("/{task_id}", response_model=TaskOut)
 async def get_task(
     task_id: int,
-    project_id: int = Query(...),
+    project_id: int = Path(...),
     db: AsyncSession = Depends(get_db),
     current_user: User = Depends(get_current_active_user),
 ) -> Task:
@@ -84,7 +84,7 @@ async def get_task(
 async def update_task(
     task_id: int,
     body: TaskUpdate,
-    project_id: int = Query(...),
+    project_id: int = Path(...),
     db: AsyncSession = Depends(get_db),
     current_user: User = Depends(get_current_active_user),
 ) -> Task:
@@ -105,7 +105,7 @@ async def update_task(
 @router.delete("/{task_id}", status_code=status.HTTP_204_NO_CONTENT)
 async def delete_task(
     task_id: int,
-    project_id: int = Query(...),
+    project_id: int = Path(...),
     db: AsyncSession = Depends(get_db),
     current_user: User = Depends(get_current_active_user),
 ) -> None:
