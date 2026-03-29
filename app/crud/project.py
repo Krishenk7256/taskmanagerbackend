@@ -5,7 +5,7 @@ from ..models.project import Project
 from ..schemas.project import ProjectCreate, ProjectUpdate
 from .base import CRUDBase
 
-class CRUDProject(CRUDBASE[Project, ProjectCreate, ProjectUpdate]):
+class CRUDProject(CRUDBase[Project, ProjectCreate, ProjectUpdate]):
     async def get_multi_by_owner(self, db: AsyncSession, *, owner_id: int, skip: int = 0, limit: int = 100):
         result = await db.execute(
             select(Project)

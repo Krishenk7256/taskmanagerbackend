@@ -14,7 +14,7 @@ class CRUDUser(CRUDBase[User, UserCreate, UserUpdate]):
         result = await db.execute(select(User).where(User.username == username))
         return result.scalar_one_or_none()
     async def create(self, db: AsyncSession, *, obj_in:UserCreate) -> User:
-        from ..core import get_password_hash
+        from ..core.security import get_password_hash
         db_obj = User(
             email=obj_in.email,
             username=obj_in.username,
