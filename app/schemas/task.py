@@ -1,5 +1,6 @@
-from pydantic import BaseModel, Field
 from typing import Optional
+
+from pydantic import BaseModel, ConfigDict, Field
 
 
 class TaskBase(BaseModel):
@@ -13,6 +14,12 @@ class TaskCreate(TaskBase):
     assignee_id: Optional[int] = None
 
 
+class TaskCreateInProject(TaskBase):
+    """Создание задачи внутри проекта: project_id задаётся в URL."""
+
+    assignee_id: Optional[int] = None
+
+
 class TaskUpdate(BaseModel):
     title: Optional[str] = Field(None, max_length=200)
     description: Optional[str] = None
@@ -21,9 +28,8 @@ class TaskUpdate(BaseModel):
 
 
 class TaskOut(TaskBase):
+    model_config = ConfigDict(from_attributes=True)
+
     id: int
     project_id: int
     assignee_id: Optional[int] = None
-
-    class Config:
-        from_attributes = True

@@ -1,5 +1,7 @@
-from pydantic import BaseModel, Field
 from typing import Optional
+
+from pydantic import BaseModel, ConfigDict, Field
+
 
 class ProjectBase(BaseModel):
     title: str = Field(..., max_length=200)
@@ -13,8 +15,7 @@ class ProjectUpdate(BaseModel):
     description: Optional[str] = None
 
 class ProjectOut(ProjectBase):
+    model_config = ConfigDict(from_attributes=True)
+
     id: int
     owner_id: int
-
-    class Config:
-        from_attributes = True

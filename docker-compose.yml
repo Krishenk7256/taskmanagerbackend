@@ -1,0 +1,35 @@
+services:
+  db:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_USER: app
+      POSTGRES_PASSWORD: app
+      POSTGRES_DB: taskmanager
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U app -d taskmanager"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  api:
+    build: .
+    ports:
+      - "8000:8000"
+    environment:
+      ENV: production
+      DATABASE_URL: postgresql+asyncpg://app:app@db:5432/taskmanager
+      SECRET_KEY: ${SECRET_KEY:-a0123456789012345678901234567890abcdef012345678901234567890abcd}
+      AUTO_CREATE_TABLES: "false"
+      SQL_ECHO: "false"
+      CORS_ORIGINS: ${CORS_ORIGINS:-*}
+      WEB_CONCURRENCY: "2"
+    depends_on:
+      db:
+        condition: service_healthy
+
+volumes:
+  pgdata:
